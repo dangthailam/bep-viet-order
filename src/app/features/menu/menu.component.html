@@ -1,0 +1,36 @@
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-4 p-4">
+  <div *ngFor="let dish of dishes" class="rounded-lg overflow-hidden shadow-lg">
+    <div class="relative overflow-hidden pb-60">
+      <img
+        [src]="dish.imageUrl"
+        [alt]="dish.name"
+        class="absolute h-full w-full object-cover object-center"
+      />
+    </div>
+    <div class="relative p-2">
+      <div class="flex h-8 items-center justify-between text-2xl">
+        <h3>{{ dish.name }}</h3>
+        <p class="font-light text-gray-500">{{ dish.price }} €</p>
+      </div>
+      <p class="text-gray-500 font-light my-2">
+        {{ dish.description }}
+      </p>
+      <button
+        class="
+          w-full
+          focus:outline-none
+          text-white text-sm
+          py-2.5
+          px-5
+          rounded-md
+          border border-gray-600
+          bg-gray-500
+          hover:bg-gray-600
+          hover:shadow-lg
+        "
+      >
+        Ajouter au panier
+      </button>
+    </div>
+  </div>
+</div>
